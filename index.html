@@ -34,26 +34,18 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-background-image="img/brandenburgerTor.jpg">
+				<section data-background-image="img/AdamsSeat.jpg">
           <br/>
           <br/>
           <br/>
-          <h3>Building Streaming pipelines for Neural Machine Translation</h3>
+          <h3>Streaming pipelines for Neural Machine Translation</h3>
           <br/>
-          <p>Suneel Marthi<br/>
-             Kellen Sunderland
-          </p>
-          <p style="font-size: 60%">April 19, 2018<br/>
-             DataWorks Summit, Berlin, Germany</p>
+          <p>Suneel Marthi</p>
+          <p style="font-size: 60%">October 22, 2018<br/>
+             Open Source Summit, Edinburgh, Scotland</p>
         </section>
 				<section data-background-image="img/ZsMwlm2.jpg">
-          <h3>$WhoAreWe</h3>
-          <h6 style='text-align: left; font-size: 80%;'>Kellen Sunderland <br/><span style="font-size: 60%"><i class="fa fa-twitter" aria-hidden="true"></i> @KellenDB</span></h6>
-          <ul style='font-size: 70%;'>
-            <li>Member of Apache Software Foundation</li>
-            <li>Contributor to Apache MXNet (incubating), and committer on Apache Joshua (incubating)</li>
-          </ul>
-          <br/>
+          <h3>$WhoAmI</h3>
           <h6 style='text-align: left; font-size: 80%;'>Suneel Marthi <br/><span style="font-size: 60%"><i class="fa fa-twitter" aria-hidden="true"></i> @suneelmarthi</span></h6>
           <ul style='font-size: 70%;'>
             <li>Member of Apache Software Foundation</li>
@@ -83,7 +75,6 @@
           <h3>OSS Tools (contd)</h3>
           <ul>
             <li>Apache Joshua (incubating) - A statistical machine translation decoder for phrase-based, hierarchical, and syntax-based machine translation, written in Java.</li>
-            <li>Apache MXNet (incubating) - A flexible and efficient library for deep learning.</li>
             <li>Sockeye - A sequence-to-sequence framework for Neural Machine Translation based on Apache MXNet Incubating.</li>
           </ul>
         </section>
@@ -433,19 +424,6 @@ e~ = best translation, the one with highest probability</code></pre>
           <span style='font-size: 50%;'>https://github.com/MXNetEdge/incubator-mxnet/tree/dev_speed</span><br/>
         </section>
         <section data-background-image="img/ZsMwlm2-redish.jpg">
-          <h3>Apache MXNet Profiling Tools</h3>
-          <table>
-            <tr>
-              <th>CPU Profiler (vtune)</th>
-              <th>GPU Profiler (nvprof)</th>
-            </tr>
-          </table>
-          <table>
-            <td><img src='img/vtune_2.png' style='width: 400px; border: none; background: none;box-shadow: none; '/></td>
-            <td><img src='img/lstm.png' style='width: 400px; border: none; background: none;box-shadow: none; '/></td>
-          </table>
-        </section>
-        <section data-background-image="img/ZsMwlm2-redish.jpg">
           <h3>TVM</h3>
             <p style='font-size: 75%;'>TVM is a Tensor intermediate representation(IR) stack for deep learning systems. It is designed to close the gap between the productivity-focused deep learning frameworks, and the performance- and efficiency-focused hardware backends. TVM works with deep learning frameworks to provide end to end compilation to different backends. </p>
             <p style='font-size: 50%;'>https://github.com/dmlc/tvm</p>
@@ -459,11 +437,6 @@ e~ = best translation, the one with highest probability</code></pre>
           <h3>Alibaba TVM Optimization</h3>
             <img src='img/tvm_speedup.png' style='width: 400px; border: none; background: none;box-shadow: none; '/>
         </section>
-        <section data-background-image="img/ZsMwlm2-redish.jpg">
-          <h3>Facebook - Tensor Comprehensions</h3><br/>
-          <img src='img/tc_evol_slower.gif' style='width: 400px; border: none; background: none;box-shadow: none; '/><br/>
-          <p style='font-size: 50%;'>https://research.fb.com/announcing-tensor-comprehensions/</p>
-        </section>
         <section data-background-image="img/ZsMwlm2-purpleish.jpg">
             <h3>Streaming Pipelines for NMT</h3>
         </section>
@@ -472,22 +445,6 @@ e~ = best translation, the one with highest probability</code></pre>
             <h3>NMT Inference Preprocessing</h3>
             <img src='img/NMT_tasks.png' style='max-width: 80%; border: none; background: none;box-shadow: none; '/>
         </section>
-        <section data-background-image="img/ZsMwlm2-redish.jpg">
-            <h3>Language Detection (Flink + OpenNLP)</h3>
-            <img src='img/LanguageDetect.png' style='max-width: 80%; border: none; background: none;box-shadow: none; '/>
-        </section>
-        <section data-background-image="img/ZsMwlm2-bluish.jpg">
-            <h3>Sentence Detection (Flink + OpenNLP)</h3>
-            <img src='img/SentenceDetect.png' style='max-width: 80%; border: none; background: none;box-shadow: none; '/>
-        </section>
-        <section data-background-image="img/ZsMwlm2-purpleish.jpg">
-            <h3>Tokenization (Flink + OpenNLP)</h3>
-            <img src='img/Tokenizer.png' style='max-width: 80%; border: none; background: none;box-shadow: none; '/>
-        </section>
-        <section data-background-image="img/ZsMwlm2-greenish.jpg">
-            <h3>SockeyeTranslate (Flink + Thrift)</h3>
-            <img src='img/SockeyeThriftClient.png' style='max-width: 80%; border: none; background: none;box-shadow: none; '/>
-        </section>
         <section data-background-image="img/ZsMwlm2-greenish.jpg">
             <h3>Complete Pipeline (Flink)</h3>
             <img src='img/Complete-pipeline.png' style='max-width: 80%; border: none; background: none;box-shadow: none; '/>
@@ -495,6 +452,15 @@ e~ = best translation, the one with highest probability</code></pre>
         <section data-background-image="img/ZsMwlm2-greenish.jpg">
             <h3>NMT Inference Pipeline</h3>
             <img src='img/pipeline.png' style='max-width: 80%; border: none; background: none;box-shadow: none; '/>
+        </section>
+        <section data-background-image="img/buzzwords_2017-blueish.png">
+            <h3>Future Work</h3>
+            <ul>
+                <li>Train NMT models on real time streams</li>
+                <li>Ideally ingest 2 similar streams in different languages to train NMT models</li>
+                <li>Definitely feasible with Apache Flink Stateful Stream Processing</li>
+                <li>Possible to do both Training and Inference using Flink's Broadcast State</li>
+            </ul>
         </section>
         <section data-background-image="img/ZsMwlm2-purpleish.jpg">
             <h3>Credits</h3>
@@ -505,16 +471,12 @@ e~ = best translation, the one with highest probability</code></pre>
           <img src="img/OpenNLP-Team.png", width="80%"/>
         </section>
         <section data-background-image="img/buzzwords_2017-blueish.png">
-            <h3>Apache Flink Team</h3>
-            <br/>
-            <img src="img/Flink-Team.png", width="80%"/>
-        </section>
-        <section data-background-image="img/buzzwords_2017-blueish.png">
           <h3>Credits cont.</h3>
           <ul>
-            <li>Asmus Hetzel (Amazon), Marek Kolodziej (NVIDIA), Dick Carter (NVIDIA), Tianqi Chen (U of W), MKL-DNN Team (Intel)</li>
-            <li>Sockeye: Felix Hieber (Amazon), Tobias Domhan (Amazon), David Vilar (Amazon), Matt Post (Amazon)</li>
-            <li>Apache Joshua: Matt Post (Johns Hopkins), Tommaso Teofili (Adobe), NASA JPL</li>
+            <li>Kellen Sunderland, Nikolay Ulmasov (Amazon)</li>
+            <li>Apache Flink: Fabian Hueske (Data Artisans), Dawid Wysakowicz (Data Artisans)</li>
+            <li>Sockeye: Felix Hieber (Amazon-Berlin), Tobias Domhan (Amazon-Berlin), David Vilar (Amazon-Berlin), Matt Post (Amazon-Berlin)</li>
+            <li>Apache Joshua: Matt Post (Johns Hopkins), Tommaso Teofili (Adobe - Rome)</li>
             <li>University of Edinburgh, Google, Facebook, NYU, Stanford</li>
           </ul>
         </section>
